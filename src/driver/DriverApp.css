@@ -1,0 +1,305 @@
+.driver-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.driver-header {
+  background: linear-gradient(135deg, #0F2B5C 0%, #1a4d8f 100%);
+  color: white;
+  padding: 20px 0;
+  border-bottom: 3px solid #D4A574;
+}
+
+.driver-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.driver-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.driver-nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.driver-nav button {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.driver-nav button:hover {
+  background-color: rgba(212, 165, 116, 0.2);
+  color: #D4A574;
+}
+
+.driver-nav button.active {
+  background-color: #D4A574;
+  color: #0F2B5C;
+}
+
+.btn-logout {
+  background-color: #D4A574 !important;
+  color: #0F2B5C !important;
+  font-weight: 500;
+}
+
+.btn-logout:hover {
+  background-color: #e6b88a !important;
+}
+
+.driver-main {
+  flex: 1;
+  padding: 40px 0;
+}
+
+.driver-home,
+.driver-rides,
+.driver-earnings,
+.driver-profile {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.driver-home h2,
+.driver-rides h2,
+.driver-earnings h2,
+.driver-profile h2 {
+  color: #0F2B5C;
+  margin-bottom: 25px;
+}
+
+.status-card {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  border-radius: 8px;
+  border: 2px solid #D4A574;
+  margin-bottom: 30px;
+}
+
+.status-card h2 {
+  color: #0F2B5C;
+  margin-bottom: 20px;
+}
+
+.status-text {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #D4A574;
+  font-weight: 600;
+}
+
+.quick-stats {
+  margin-top: 40px;
+}
+
+.quick-stats h3 {
+  color: #0F2B5C;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #D4A574 0%, #e6b88a 100%);
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.2);
+}
+
+.stat-card h4 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Rides List */
+.rides-list {
+  display: grid;
+  gap: 15px;
+}
+
+.ride-card {
+  background: white;
+  border: 1px solid #D4A574;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ride-info {
+  flex: 1;
+}
+
+.ride-locations {
+  margin-bottom: 15px;
+}
+
+.ride-locations p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.ride-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.ride-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.ride-status {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  min-width: 80px;
+}
+
+.ride-action {
+  min-width: 120px;
+}
+
+/* Earnings Cards */
+.earnings-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.earnings-card {
+  background: linear-gradient(135deg, #D4A574 0%, #e6b88a 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.2);
+}
+
+.earnings-card h3 {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.earnings-card .amount {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Buttons */
+.btn-success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #45a049;
+}
+
+.btn-danger {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #da190b;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.875rem;
+}
+
+/* Alert */
+.alert {
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 768px) {
+  .driver-header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .driver-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .driver-main {
+    padding: 20px 0;
+  }
+
+  .driver-home,
+  .driver-rides,
+  .driver-earnings,
+  .driver-profile {
+    padding: 20px;
+  }
+
+  .ride-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .earnings-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-card {
+    padding: 20px;
+  }
+}
+

@@ -1,0 +1,89 @@
+.language-switcher {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.language-switcher .label {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #0F2B5C;
+  font-weight: 500;
+}
+
+.language-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 2px solid #D4A574;
+  background: white;
+  color: #0F2B5C;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.language-btn:hover {
+  background-color: #f9f9f9;
+  border-color: #0F2B5C;
+}
+
+.language-btn.active {
+  background-color: #D4A574;
+  color: white;
+  border-color: #D4A574;
+}
+
+.language-btn .flag {
+  font-size: 20px;
+}
+
+.language-btn .name {
+  font-size: 14px;
+}
+
+/* Compact Version */
+.language-selector-compact {
+  background-color: #D4A574;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.language-selector-compact:hover {
+  background-color: #e6b88a;
+}
+
+.language-selector-compact option {
+  background-color: white;
+  color: #0F2B5C;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .language-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .language-btn {
+    padding: 10px 12px;
+  }
+
+  .language-btn .name {
+    display: none;
+  }
+}
+

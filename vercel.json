@@ -1,0 +1,91 @@
+{
+  "version": 2,
+  "name": "cocumove",
+  "env": {
+    "VITE_API_URL": {
+      "description": "API URL for the application",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "Database connection URL",
+      "required": true
+    },
+    "JWT_SECRET": {
+      "description": "JWT secret key",
+      "required": true
+    },
+    "COCU_TOKEN_INITIAL_BALANCE": {
+      "description": "Initial COCU token balance for new users",
+      "default": "100"
+    },
+    "COCU_TOKEN_RIDE_REWARD": {
+      "description": "COCU tokens reward per ride completion",
+      "default": "5"
+    },
+    "COCU_TOKEN_REFERRAL_BONUS": {
+      "description": "COCU tokens referral bonus",
+      "default": "10"
+    },
+    "CLOUDFLARE_R2_ENDPOINT": {
+      "description": "Cloudflare R2 endpoint",
+      "required": true
+    },
+    "CLOUDFLARE_R2_PUBLIC_URL": {
+      "description": "Cloudflare R2 public URL",
+      "required": true
+    },
+    "CLOUDFLARE_ACCESS_KEY_ID": {
+      "description": "Cloudflare R2 access key ID",
+      "required": true
+    },
+    "CLOUDFLARE_SECRET_ACCESS_KEY": {
+      "description": "Cloudflare R2 secret access key",
+      "required": true
+    },
+    "CLOUDFLARE_BUCKET_NAME": {
+      "description": "Cloudflare R2 bucket name",
+      "default": "cocumove"
+    }
+  },
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "functions": {
+    "server/index.ts": {
+      "runtime": "nodejs18.x",
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/server/index.ts"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
+
