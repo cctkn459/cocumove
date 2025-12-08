@@ -5,39 +5,11 @@
   "installCommand": "npm install",
   "framework": "vite",
   "env": {
-    "VITE_API_URL": "https://cocumove.vercel.app/api",
+    "VITE_API_URL": "https://cocumove-angel-milciades-gonzalez-ramirezs-projects.vercel.app/api",
     "DATABASE_URL": "postgresql://user:password@localhost:5432/cocumove",
     "JWT_SECRET": "cocumove-secret-key-production-2024",
     "COCU_TOKEN_INITIAL_BALANCE": "100",
     "COCU_TOKEN_RIDE_REWARD": "5",
-    "COCU_TOKEN_REFERRAL_BONUS": "10",
-    "CLOUDFLARE_R2_ENDPOINT": "https://account-id.r2.cloudflarestorage.com",
-    "CLOUDFLARE_R2_PUBLIC_URL": "https://files.cocumove.com",
-    "CLOUDFLARE_ACCESS_KEY_ID": "your-access-key",
-    "CLOUDFLARE_SECRET_ACCESS_KEY": "your-secret-key",
-    "CLOUDFLARE_BUCKET_NAME": "cocumove"
-  },
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    }
-  ]
+    "COCU_TOKEN_REFERRAL_BONUS": "10"
+  }
 }
