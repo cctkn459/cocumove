@@ -17,19 +17,6 @@
     "CLOUDFLARE_SECRET_ACCESS_KEY": "your-secret-key",
     "CLOUDFLARE_BUCKET_NAME": "cocumove"
   },
-  "functions": {
-    "server/index.ts": {
-      "runtime": "nodejs18.x",
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/server/index.ts"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
